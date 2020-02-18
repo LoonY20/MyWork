@@ -1,0 +1,29 @@
+<doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        let x = + prompt("Введите координаты X",);
+        let y = + prompt("Введите координаты Y",);
+        let c;
+        if ((x > 0) && (y > 0)) {
+            c = 'Точка пренадлежит 1 четверти';
+        }
+        else if ((x > 0) && (y < 0)) {
+            c = 'Точка пренадлежит 4 четверти';
+        }
+        else if ((x < 0) && (y < 0)) {
+            c = 'Точка пренадлежит 3 четверти';
+        }
+        else if ((x < 0) && (y > 0)) {
+            c = 'Точка пренадлежит 2 четверти';
+        }
+        else {
+            c = 'Точка пренадлежит 0,0';
+        }
+        document.write( c );
+    </script>
+</body>
+</html>
