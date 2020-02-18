@@ -1,0 +1,23 @@
+<doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        let a = + prompt("Введите первое число",);
+        let b = + prompt("Введите второе число",);
+        let c = + prompt("Введите третье число",);
+        let d;
+        if (a * b * c > a + b + c) {
+            d = a * b * c + 3
+        }
+        else {
+            d = a + b + c + 3
+        }
+        /// d = Math.max( a + b + c , a * b * c) + 3
+        /// document.write( d );
+        document.write( a + b + c );
+    </script>
+</body>
+</html>
