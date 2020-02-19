@@ -1,0 +1,21 @@
+<doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        let n = + prompt("Введите число для проверки простое ли число",);
+        let i = 2;
+        let text = 'Число простое'
+        const limit = Math.sqrt(n);
+        while (i <= limit) {
+            if (n % i === 0) {
+                text = 'Число составное'
+            }
+            i++;
+        }
+        document.write( text );
+    </script>
+</body>
+</html>
