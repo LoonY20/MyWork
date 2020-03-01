@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing 'arrays' block</title>
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <script src="task5.js"></script>
+    <script src="task6.js"></script>
+    <script src="task7.js"></script>
+    <script src="task8.js"></script>
+    <script src="task9.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+    </script>
+</head>
+<body>
+<div id="mocha"></div>
+<script>
+    describe('minElemTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.equal(minElem([1, 3, 5, 7, 9, 11, 51]), 1);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(minElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(minElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(minElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(minElem(NaN), undefined);
+        });
+    });
+    describe('maxElemTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.equal(maxElem([1, 3, 5, 7, 9, 11, 51]), 51);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(maxElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(maxElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(maxElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(maxElem(NaN), undefined);
+        });
+    });
+    describe('findIndexMinElemTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.equal(findIndexMinElem([1, 3, 5, 7, 9, 11, 51]), 0);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(findIndexMinElem(10), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(findIndexMinElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(findIndexMinElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(findIndexMinElem(NaN), undefined);
+        });
+    });
+    describe('findIndexMaxElemTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.equal(findIndexMaxElem([1, 3, 5, 7, 9, 11, 51]), 6);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(findIndexMaxElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(findIndexMaxElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(findIndexMaxElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(findIndexMaxElem(NaN), undefined);
+        });
+    });
+    describe('summOddDigitsTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.equal(summOddDigits([1, 3, 5, 7, 9, 11, 51]), 87);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(summOddDigits(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(summOddDigits(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(summOddDigits(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(summOddDigits(NaN), undefined);
+        });
+    });
+    describe('reverseArrayTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.deepEqual(reverseArray([1, 3, 5, 7, 9, 11, 51]), [51, 11, 9, 7, 5, 3, 1]);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(reverseArray(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(reverseArray(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(reverseArray(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(reverseArray(NaN), undefined);
+        });
+    });
+    describe('countOddElemTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.equal(countOddElem([1, 3, 5, 7, 9, 11, 51]), 7);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(countOddElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(countOddElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(countOddElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(countOddElem(NaN), undefined);
+        });
+    });
+    describe('swapCouplePartTest', function(){
+        it('input: [1, 3, 5, 7, 9, 11, 51] ', function(){
+            assert.deepEqual(swapCouplePart([1, 3, 5, 7, 9, 11, 51]), [9, 11, 51, 1, 3, 5, 7]);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(countOddElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(countOddElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(countOddElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(countOddElem(NaN), undefined);
+        });
+    });
+    describe('bubbleSortTest', function(){
+        it('input: [5, 3, 1, 51, 11, 9, 7] ', function(){
+            assert.deepEqual(bubbleSort([5, 3, 1, 51, 11, 9, 7]), [1, 3, 5, 7, 9, 11, 51]);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(countOddElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(countOddElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(countOddElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(countOddElem(NaN), undefined);
+        });
+    });
+    describe('insertSortTest', function(){
+        it('input: [5, 3, 1, 51, 11, 9, 7] ', function(){
+            assert.deepEqual(insertSort([5, 3, 1, 51, 11, 9, 7]), [1, 3, 5, 7, 9, 11, 51]);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(countOddElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(countOddElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(countOddElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(countOddElem(NaN), undefined);
+        });
+    });
+    describe('selectSortTest', function(){
+        it('input: [5, 3, 1, 51, 11, 9, 7] ', function(){
+            assert.deepEqual(selectSort([5, 3, 1, 51, 11, 9, 7]), [1, 3, 5, 7, 9, 11, 51]);
+        });
+        it('input: Hello ', function(){
+            assert.equal(maxElem('Hello'), undefined);
+        });
+        it('input: 1 ', function(){
+            assert.equal(countOddElem(1), undefined);
+        });
+        it('input: null ', function(){
+            assert.equal(countOddElem(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(countOddElem(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(countOddElem(NaN), undefined);
+        });
+    });
+</script>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>

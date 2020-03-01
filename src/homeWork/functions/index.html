@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing 'functions' block</title>
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+    </script>
+</head>
+<body>
+<div id="mocha"></div>
+<script>
+    describe('dayOfWeekTest', function(){
+        it('input: 1 ', function(){
+            assert.equal(dayOfWeek(1), 'Monday');
+        });
+        it('input: 2 ', function(){
+            assert.equal(dayOfWeek(2), 'Tuesday');
+        });
+        it('input: 3', function(){
+            assert.equal(dayOfWeek(3), 'Wednesday');
+        });
+        it('input: null', function(){
+            assert.equal(dayOfWeek(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.equal(dayOfWeek(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.equal(dayOfWeek(NaN), 'NaN');
+        });
+        it('input: "string" ', function(){
+            assert.equal(dayOfWeek("string"), undefined);
+        });
+    });
+    describe('numbInStr', function(){
+        it('input: 100 ', function(){
+            assert.deepEqual(numbInStr(100), 'сто');
+        });
+        it('input: 34567 ', function(){
+            assert.deepEqual(numbInStr(34567), 'тридцать четыре тысячи пятьсот шестьдесят семь');
+        });
+        it('input: 3124122', function(){
+            assert.deepEqual(numbInStr(3124122), 'три миллиона сто двадцать четыре тысячи сто двадцать два');
+        });
+        it('input: 12345678 ', function(){
+            assert.deepEqual(numbInStr(12345678), 'двенадцать миллионов триста сорок пять тысяч шестьсот семьдесят восемь');
+        });
+        it('input: 98765433121 ', function(){
+            assert.deepEqual(numbInStr(98765433121), 'девяносто восемь миллиардов семьсот шестьдесят пять миллионов четыреста тридцать три тысячи сто двадцать один');
+        });
+        it('input: 66666666666', function(){
+            assert.deepEqual(numbInStr(6666666666), 'шесть миллиардов шестьсот шестьдесят шесть миллионов шестьсот шестьдесят шесть тысяч шестьсот шестьдесят шесть');
+        });
+        it('input: 99999999999', function(){
+            assert.deepEqual(numbInStr(999999999999), 'девятьсот девяносто девять миллиардов девятьсот девяносто девять миллионов девятьсот девяносто девять тысяч девятьсот девяносто девять');
+        });
+    });
+    describe('findDistanseTest', function(){
+        it('input: 1, 2, 3, 4 ', function(){
+            assert.deepEqual(findDistanse(1, 2, 3, 4), 2.8284271247461903);
+        });
+        it('input: 4, 3, 2, 1', function(){
+            assert.deepEqual(findDistanse(-4, -3, -2, -1), 2.8284271247461903);
+        });
+        it('input: 1 ', function(){
+            assert.deepEqual(findDistanse(1), 'a few args');
+        });
+        it('input: null', function(){
+            assert.deepEqual(findDistanse(null), undefined);
+        });
+        it('input: undefined ', function(){
+            assert.deepEqual(findDistanse(undefined), undefined);
+        });
+        it('input: NaN ', function(){
+            assert.deepEqual(findDistanse(NaN), undefined);
+        });
+        it('input: "string" ', function(){
+            assert.deepEqual(findDistanse("string"), undefined);
+        });
+    });
+</script>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>
