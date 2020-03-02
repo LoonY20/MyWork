@@ -148,27 +148,6 @@ equal.addEventListener('click', function () {
 })
 
 clearAll.addEventListener('click', clearAllFunc);
-clear.addEventListener('click', function () {
-    if(result == 'Zero division') return;
-    if(trig == true){
-        for(let count of operators){
-            if(inpHelp.value[inpHelp.value.length-1] == count.value){
-                trig = false;
-                inpHelp.value = inpHelp.value.substring(0, inpHelp.value.length-1);
-                if(inpHelp.value[inpHelp.value.length-2] == undefined) clearAllFunc();
-                return;
-            } 
-        }
-        if(inpHelp.value[inpHelp.value.length-2] == undefined) clearAllFunc();
-        val2 = inp.value.substring(0, inp.value.length-1);
-        inp.value = val2;
-        console.log('clear work ', inpHelp.value[inpHelp.value.length-2]);
-    }else{
-        val1 = inp.value.substring(0, inp.value.length-1);;
-        inp.value = val1;
-    }
-    inpHelp.value = inpHelp.value.substring(0, inpHelp.value.length-1);
-});
 
 addPoint.addEventListener('click', function () {
     if(inp.value.indexOf('.') == -1 && inpHelp.value != '' && inp.value != ''){
