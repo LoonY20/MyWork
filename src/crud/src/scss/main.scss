@@ -1,0 +1,248 @@
+body {
+  background: #d0ccd4;
+}
+
+.head {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.radiobutton {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input_button {
+  width: 90%;
+}
+
+.input_button > input {
+  width: 33%;
+  margin-left: 0;
+  margin-right: 0;
+  height: 20px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid darkslategrey;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0);
+  outline:none;
+}
+
+.input_button > input:focus {
+  border-bottom:1px solid #1074E8;
+}
+
+button[type="button"] {
+  width: 33%;
+  height: 25px;
+  transition-duration: 0.2s;
+  border: none;
+  font-weight: bold;
+}
+
+.conteiner_table,
+#root .info {
+  display: flex;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-top: 1px solid;
+}
+
+.radiobutton_num {
+  width: 145px;
+  padding-left: 7px;
+}
+
+.conteiner_table__col,
+#root .info div {
+  width: 16.6%;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+#create {
+  background-color: green;
+
+}
+
+#update {
+  background-color: darkslateblue;
+}
+
+#delete {
+  background-color: red;
+}
+
+
+#create:hover {
+  border-radius: 13px;
+  color: white;
+  background-color: #00c500;
+}
+
+
+#update:hover {
+  border-radius: 13px;
+  color: rgb(233, 103, 16);
+  background-color: yellow;
+}
+
+
+#delete:hover {
+  border-radius: 13px;
+  color: blue;
+  background-color: darkred;
+}
+
+.radiobutton_num:hover {
+  color: white;
+}
+
+input[type="radio"]:checked:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: green;
+  display: inline-block;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+//
+//@media (max-width: 1056px) and (min-width: 260px) {
+//  .conteiner_table__col,
+//  #root .info {
+//    width: 214px;
+//    border: 1px solid;
+//  }
+//
+//  .radiobutton {
+//    width: 214px;
+//    border: 1px solid;
+//  }
+//
+//  .conteiner_table,
+//  #root .info div {
+//    border-top: 0px;
+//    margin-top: 0;
+//  }
+//}
+
+//-----------------SECTION 1
+
+.section-1 {
+  padding: 120px;
+  position: relative;
+
+  &:before {
+    content: "";
+    background-image: url("/img/section1-bg.jpeg");
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.4;
+  }
+}
+
+.section-1-header {
+  text-align: center;
+
+  &__title {
+    font-family: "Myriad Set Pro";
+    font-weight: 900;
+    font-size: 50px;
+  }
+
+  &__text {
+
+  }
+}
+
+//-------SECTION 2
+
+.section-2 {
+  padding: 120px;
+
+  &__header {
+    text-align: center;
+  }
+
+  .header {
+    &__title {
+      font-weight: 400;
+      font-size: 36px;
+    }
+
+    &__text {
+
+    }
+  }
+
+  &__cards {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .cards {
+    &__card {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border: 1px solid gray;
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .card {
+    &__title {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+
+  .divider-block {
+    &__divider {
+      display: inline-block;
+      border: 1px solid;
+      border-image-slice: 1;
+      width: 10%;
+      flex-shrink: 1;
+    }
+  }
+}
